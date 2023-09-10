@@ -9,6 +9,7 @@
     <div>{{ title }}</div>
     <div class="center gap-x-2">
       <DarkToggle></DarkToggle>
+      <LangToggle></LangToggle>
     </div>
   </div>
   <div class="flex gap-4 p-4">

@@ -1,10 +1,12 @@
 # ✨ Template-Vite
 
-[![package lang][lang]][lang]
+[![Lint][lint]](https://github.com/szmxx/template-vite/actions/workflows/lint.yml)
+[![Test][test]](https://github.com/szmxx/template-vite/actions/workflows/test.yml)
+[![Build][build]](https://github.com/szmxx/template-vite/actions/workflows/build.yml)
 [![package version][version]][version]
+[![package lang][lang]][lang]
 [![package contributors][contributors]][contributors]
 [![package lastcommit][lastcommit]][lastcommit]
-[![package workflow][workflow]][workflow]
 
 ## Features
 
@@ -52,8 +54,10 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
+[lint]: https://github.com/szmxx/template-vite/actions/workflows/lint.yml/badge.svg
+[build]: https://github.com/szmxx/template-vite/actions/workflows/build.yml/badge.svg
+[test]: https://github.com/szmxx/template-vite/actions/workflows/test.yml/badge.svg
 [lang]: https://img.shields.io/github/languages/top/szmxx/template-vite
 [version]: https://img.shields.io/github/package-json/v/szmxx/template-vite
 [contributors]: https://img.shields.io/github/contributors/szmxx/template-vite
 [lastcommit]: https://img.shields.io/github/last-commit/szmxx/template-vite/main
-[workflow]: https://img.shields.io/github/actions/workflow/status/szmxx/template-vite/ci.yml

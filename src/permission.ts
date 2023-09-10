@@ -13,8 +13,7 @@ router.beforeEach(async (to, from, next) => {
   if (isEmpty(history.state.current)) {
     assign(history.state, { current: from.fullPath })
   }
-  const theme = to?.query?.theme as string
-  useTheme(theme)
+  console.log(to, from)
   next()
 })
 

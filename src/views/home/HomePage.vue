@@ -7,7 +7,10 @@
 <template>
   <div class="flex justify-between h-[60px] items-center px-4 border-b">
     <div>{{ title }}</div>
-    <DarkToggle></DarkToggle>
+    <div class="center gap-x-2">
+      <DarkToggle></DarkToggle>
+      <LangToggle></LangToggle>
+    </div>
   </div>
   <div class="flex gap-4 p-4">
     <div
@@ -24,17 +27,18 @@
 <script setup lang="ts">
 import useStore from '@/store/app'
 const { config } = useStore()
+const { t } = useI18n()
 const title = config?.title
-const portals = [
+const portals = ref([
   {
-    label: '系统一',
-    path: '/demo',
+    label: t('common.chinese'),
+    path: '/cn',
   },
   {
-    label: '系统二',
-    path: '/admin',
+    label: t('common.english'),
+    path: '/en',
   },
-]
+])
 
 const router = useRouter()
 

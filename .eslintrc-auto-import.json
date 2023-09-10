@@ -313,6 +313,11 @@
     "ElLoading": true,
     "ElMessage": true,
     "ElMessageBox": true,
-    "WritableComputedRef": true
+    "WritableComputedRef": true,
+    "currentLang": true,
+    "useLang": true,
+    "currentLocale": true,
+    "useLocale": true,
+    "useI18n": true
   }
 }

@@ -1,4 +1,4 @@
-# ✨ template-vite
+# ✨ Template-Vite
 
 [![package lang][lang]][lang]
 [![package version][version]][version]

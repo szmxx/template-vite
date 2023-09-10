@@ -58,14 +58,5 @@
   "[sass]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
-  "i18n-ally.localesPaths": ["src/locales/lang"],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.sortKeys": false,
-  "i18n-ally.namespace": true,
-  "i18n-ally.pathMatcher": "{locale}/{namespaces}.{ext}",
-  "i18n-ally.enabledParsers": ["ts", "json"],
-  "i18n-ally.sourceLanguage": "en-US",
-  "i18n-ally.displayLanguage": "zh-CN",
-  "i18n-ally.enabledFrameworks": ["vue"],
   "vitest.commandLine": "npx vitest"
 }

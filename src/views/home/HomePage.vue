@@ -27,15 +27,14 @@
 <script setup lang="ts">
 import useStore from '@/store/app'
 const { config } = useStore()
-const { t } = useI18n()
 const title = config?.title
 const portals = ref([
   {
-    label: t('common.chinese'),
+    label: '中文',
     path: '/cn',
   },
   {
-    label: t('common.english'),
+    label: '英文',
     path: '/en',
   },
 ])

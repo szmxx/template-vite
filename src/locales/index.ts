@@ -19,7 +19,7 @@ const i18n = createI18n({
   locale: '',
 })
 
-await setLocale(currentLocale, true)
+setLocale(currentLocale, true)
 
 export async function setLocale(locale: string, bool?: boolean) {
   if (!i18n.global.availableLocales.includes(locale) || bool)

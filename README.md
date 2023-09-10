@@ -1,9 +1,10 @@
 # ✨ template-vite
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions][github-actions-src]][github-actions-href]
-[![Codecov][codecov-src]][codecov-href]
+[![package lang][lang]][lang]
+[![package version][version]][version]
+[![package contributors][contributors]][contributors]
+[![package lastcommit][lastcommit]][lastcommit]
+[![package workflow][workflow]][workflow]
 
 ## Features
 
@@ -35,11 +36,8 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/template-vite?style=flat-square
-[npm-version-href]: https://npmjs.com/package/template-vite
-[npm-downloads-src]: https://img.shields.io/npm/dm/template-vite?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/template-vite
-[github-actions-src]: https://img.shields.io/github/workflow/status/unjs/giget/ci/main?style=flat-square
-[github-actions-href]: https://github.com/template-vite/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/gh/template-vite/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/template-vite
+[lang]: https://img.shields.io/github/languages/top/szmxx/template-vite
+[version]: https://img.shields.io/github/package-json/v/szmxx/template-vite
+[contributors]: https://img.shields.io/github/contributors/szmxx/template-vite
+[lastcommit]: https://img.shields.io/github/last-commit/szmxx/template-vite/main
+[workflow]: https://img.shields.io/github/actions/workflow/status/szmxx/template-vite/ci.yml

@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@8.6.11",
   "funding": "https://github.com/sponsors/szmxx",
   "homepage": "https://github.com/szmxx/template-vite#readme",
   "license": "MIT",

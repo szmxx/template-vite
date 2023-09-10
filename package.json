@@ -34,7 +34,7 @@
     "style": "stylelint src/**/*.{css,scss,vue}",
     "tslint": "vue-tsc --noEmit",
     "commit": "git-cz",
-    "test": "vitest dev",
+    "test": "vitest dev --run",
     "ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "changelogen": "changelogen --bump",

@@ -6,7 +6,7 @@
  */
 import router from './route'
 import NProgress from 'nprogress'
-import { isEmpty, assign } from 'lodash'
+import { isEmpty, assign } from 'lodash-es'
 NProgress.configure({ showSpinner: false })
 router.beforeEach(async (to, from, next) => {
   NProgress.start()

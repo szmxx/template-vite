@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import useStore from '@/store/app'
+
 const { config } = useStore()
 const { t } = useI18n()
 const title = config?.title
@@ -50,7 +51,7 @@ const portals = ref([
 
 const router = useRouter()
 
-function openHandler(i: Record<string, string>) {
+function openHandler(i: Record<string, unknown>) {
   if (i.path) router.push(i.path)
 }
 </script>

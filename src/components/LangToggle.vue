@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 const locale = computed(() => currentLocale.value)
+
 async function toggleLang() {
   await useLocale(locale.value === 'zh-CN' ? 'en-US' : 'zh-CN')
   location.reload()

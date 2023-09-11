@@ -15,7 +15,6 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 export default defineConfig({
@@ -45,7 +44,6 @@ export default defineConfig({
       deep: true,
       dts: true,
       resolvers: [
-        ElementPlusResolver(),
         IconsResolver({
           alias: {
             park: 'icon-park',
@@ -55,7 +53,6 @@ export default defineConfig({
       ],
     }),
     AutoImport({
-      resolvers: [ElementPlusResolver()],
       imports: ['vue', 'vue-router', '@vueuse/core', 'pinia', 'vitest'],
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
       dirs: ['./src/composables'],

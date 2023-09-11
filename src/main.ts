@@ -16,10 +16,6 @@ install(app)
     await initConfig()
     app.mount('#app')
   } catch {
-    ElNotification({
-      title: '系统错误',
-      message: '加载配置文件失败！',
-      type: 'error',
-    })
+    console.error('加载配置文件失败！')
   }
 })()

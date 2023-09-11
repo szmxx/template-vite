@@ -38,6 +38,10 @@ const portals = ref([
     label: 'DEMO',
     path: '/demo',
   },
+  {
+    label: 'Vant',
+    path: '/vant',
+  },
 ])
 
 const router = useRouter()

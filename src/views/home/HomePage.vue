@@ -25,6 +25,7 @@
 
 <script setup lang="ts">
 import useStore from '@/store/app'
+
 const { config } = useStore()
 const title = config?.title
 const portals = ref([

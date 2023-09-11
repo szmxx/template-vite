@@ -13,7 +13,6 @@ export function isSelfRouteFn() {
     : location.pathname.split('/')[0]
   pathname = '/' + pathname
   const routes: RouteRecordRaw[] = router.getRoutes()
-
   for (let i = 0; i < routes.length; i++) {
     // 路由表路径和本地一致，则是本地路由
     if (routes[i].path === pathname) {

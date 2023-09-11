@@ -6,7 +6,6 @@
 -->
 <script setup lang="ts">
 const theme = computed(() => currentTheme.value)
-useTheme(theme.value)
 function toggleDark() {
   useTheme(theme.value === 'light' ? 'dark' : 'light')
 }

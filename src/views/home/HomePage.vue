@@ -30,17 +30,19 @@ const title = config?.title
 const portals = ref([
   {
     label: '中文',
-    path: '/cn',
   },
   {
     label: '英文',
-    path: '/en',
+  },
+  {
+    label: 'DEMO',
+    path: '/demo',
   },
 ])
 
 const router = useRouter()
 
 function openHandler(i: Record<string, string>) {
-  router.push(i.path)
+  if (i.path) router.push(i.path)
 }
 </script>

@@ -32,7 +32,7 @@ export const AsyncRoutes = [...routes]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: ConstantRoutes,
+  routes: ConstantRoutes.concat(AsyncRoutes),
 })
 
 export function resetRouter() {

@@ -42,6 +42,10 @@ const portals = ref([
     label: 'DEMO',
     path: '/demo',
   },
+  {
+    label: 'Element',
+    path: '/element',
+  },
 ])
 
 const router = useRouter()

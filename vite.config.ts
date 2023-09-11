@@ -16,7 +16,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   assetsInclude: ['**/*.JPG'],
   resolve: {
@@ -44,6 +44,7 @@ export default defineConfig({
       deep: true,
       dts: true,
       resolvers: [
+        VantResolver(),
         IconsResolver({
           alias: {
             park: 'icon-park',

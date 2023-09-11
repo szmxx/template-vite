@@ -11,6 +11,7 @@ import {
   RouteLocationNormalized,
 } from 'vue-router'
 import HomePage from '@/views/home'
+
 import ErrorPage from '@/views/error'
 import routes from './routes'
 import { App } from 'vue'
@@ -29,10 +30,9 @@ export const ConstantRoutes: RouteRecordRaw[] = [
   },
 ]
 export const AsyncRoutes = [...routes]
-
 const router = createRouter({
   history: createWebHistory(),
-  routes: ConstantRoutes,
+  routes: ConstantRoutes.concat(AsyncRoutes),
 })
 
 export function resetRouter() {

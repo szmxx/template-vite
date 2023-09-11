@@ -9,6 +9,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import Unocss from 'unocss/vite'
+
 import Inspect from 'vite-plugin-inspect'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
@@ -25,6 +26,13 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/style/theme/element/index.scss" as *;',
+      },
+    },
   },
   build: {
     minify: 'terser',
@@ -45,7 +53,9 @@ export default defineConfig({
       deep: true,
       dts: true,
       resolvers: [
-        ElementPlusResolver(),
+        ElementPlusResolver({
+          importStyle: 'sass',
+        }),
         IconsResolver({
           alias: {
             park: 'icon-park',

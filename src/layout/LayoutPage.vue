@@ -30,4 +30,13 @@ import LeftMenu from './components/LeftMenu.vue'
 import { isSelfRouteFn } from '@/layout/utils'
 // 是否是自身路由
 const isSelfRoute = isSelfRouteFn()
+watch(
+  () => isSelfRoute,
+  () => {
+    console.log(isSelfRoute)
+  },
+  {
+    immediate: true,
+  },
+)
 </script>

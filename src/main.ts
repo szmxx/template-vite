@@ -5,6 +5,7 @@
  * @Description:
  */
 import { createApp } from 'vue'
+import { showFailToast } from 'vant'
 import App from './App.vue'
 import install from '@/register'
 import initConfig from './config'
@@ -16,6 +17,6 @@ install(app)
     await initConfig()
     app.mount('#app')
   } catch {
-    console.error('加载配置文件失败！')
+    showFailToast('加载配置文件失败！')
   }
 })()

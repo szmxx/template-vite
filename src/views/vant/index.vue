@@ -29,6 +29,7 @@
             type="password"
             name="密码"
             label="密码"
+            autocomplete="on"
             placeholder="密码"
             :rules="[{ required: true, message: '请填写密码' }]"
           />

@@ -42,7 +42,7 @@ const portals = ref([
 
 const router = useRouter()
 
-function openHandler(i: Record<string, string>) {
+function openHandler(i: Record<string, unknown>) {
   if (i.path) router.push(i.path)
 }
 </script>

@@ -11,11 +11,13 @@ darkModeMediaQuery.addListener((e) => {
 })
 export const currentTheme = ref(localStorage.getItem('theme') || 'light')
 export async function useTheme(theme: string) {
-  if (!theme) {
-    theme = currentTheme.value
-  } else {
-    currentTheme.value = theme
+  currentTheme.value = theme
+  if (theme === 'dark') {
+    document.documentElement.classList.remove('light')
+    document.documentElement.classList.add('dark')
+  } else if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+    document.documentElement.classList.add('light')
   }
-  if (theme) document.documentElement.className = theme
   localStorage.setItem('theme', theme)
 }

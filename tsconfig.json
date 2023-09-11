@@ -12,8 +12,7 @@
     "types": [
       "unplugin-vue-define-options",
       "vitest/importMeta",
-      "unplugin-icons/types/vue",
-      "element-plus/global"
+      "unplugin-icons/types/vue"
     ],
 
     /* Bundler mode */

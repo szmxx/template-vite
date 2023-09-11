@@ -7,7 +7,11 @@
 -->
 <template>
   <div class="flex flex-col gap-y-4 p-4">
+<<<<<<< HEAD
     <div class="flex gap-x-2">
+=======
+    <div class="flex gap-x-2" @click="onClick">
+>>>>>>> 6b3db6c (feat(core): add vant)
       <van-button type="primary">主要按钮</van-button>
       <van-button type="success">成功按钮</van-button>
       <van-button type="default">默认按钮</van-button>
@@ -29,6 +33,10 @@
             type="password"
             name="密码"
             label="密码"
+<<<<<<< HEAD
+=======
+            autocomplete="on"
+>>>>>>> 6b3db6c (feat(core): add vant)
             placeholder="密码"
             :rules="[{ required: true, message: '请填写密码' }]"
           />
@@ -44,15 +52,30 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { showLoadingToast, showDialog } from 'vant'
+=======
+import { showLoadingToast } from 'vant'
+
+>>>>>>> 6b3db6c (feat(core): add vant)
 const username = ref('')
 const password = ref('')
 const onSubmit = () => {
   console.log('submit')
 }
+<<<<<<< HEAD
 showLoadingToast({
   message: '加载中...',
   forbidClick: true,
 })
 showDialog({ message: '提示' })
+=======
+
+function onClick() {
+  showLoadingToast({
+    message: '加载中...',
+    forbidClick: true,
+  })
+}
+>>>>>>> 6b3db6c (feat(core): add vant)
 </script>

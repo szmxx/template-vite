@@ -7,7 +7,7 @@
 -->
 <template>
   <div class="flex flex-col gap-y-4 p-4">
-    <div class="flex gap-x-2" @click="onClick">
+    <div class="flex gap-x-2">
       <van-button type="primary">主要按钮</van-button>
       <van-button type="success">成功按钮</van-button>
       <van-button type="default">默认按钮</van-button>
@@ -29,7 +29,6 @@
             type="password"
             name="密码"
             label="密码"
-            autocomplete="on"
             placeholder="密码"
             :rules="[{ required: true, message: '请填写密码' }]"
           />
@@ -45,18 +44,15 @@
 </template>
 
 <script setup lang="ts">
-import { showLoadingToast } from 'vant'
-
+import { showLoadingToast, showDialog } from 'vant'
 const username = ref('')
 const password = ref('')
 const onSubmit = () => {
   console.log('submit')
 }
-
-function onClick() {
-  showLoadingToast({
-    message: '加载中...',
-    forbidClick: true,
-  })
-}
+showLoadingToast({
+  message: '加载中...',
+  forbidClick: true,
+})
+showDialog({ message: '提示' })
 </script>

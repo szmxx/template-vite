@@ -5,6 +5,9 @@
  * @Description:
  */
 import { createI18n } from 'vue-i18n'
+import { Locale } from 'vant'
+import enUS from 'vant/es/locale/lang/en-US'
+import zhCN from 'vant/es/locale/lang/zh-CN'
 const files = import.meta.glob('./lang/*/index.ts')
 import { IModule } from './types'
 
@@ -28,6 +31,8 @@ export async function setLocale(locale: string, bool?: boolean) {
   // axios.defaults.headers.common['Accept-Language'] = locale
   localStorage.setItem('lang', locale)
   i18n.global.locale.value = locale
+  if (locale === 'en-US') Locale.use('en-US', enUS)
+  if (locale === 'zh-CN') Locale.use('zh-CN', zhCN)
 }
 
 export async function loadAsyncLocale(locale: string) {

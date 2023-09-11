@@ -15,6 +15,5 @@ import LayoutPage from '@/layout'
 import { isSelfRouteFn } from '@/layout/utils'
 // 是否是自身路由
 const isSelfRoute = isSelfRouteFn()
-
 console.log(import.meta.env.VITE_APP_NAME)
 </script>

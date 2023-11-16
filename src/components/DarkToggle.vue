@@ -1,9 +1,3 @@
-<!--
- * @Author: cola
- * @Date: 2023-09-09 00:59:50
- * @LastEditors: cola
- * @Description:
--->
 <script setup lang="ts">
 const theme = computed(() => currentTheme.value)
 function toggleDark() {

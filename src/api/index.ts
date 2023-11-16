@@ -2,7 +2,6 @@ import { getRefreshToken, getToken, setToken } from '@/utils/auth'
 import Http from '@/utils/Http'
 import { AxiosError, AxiosInstance } from 'axios'
 import { refreshToken } from './auth'
-import { RegistrableApp } from 'qiankun'
 const REFRESH_WHITELIST = ['/auth/refreshToken', '/auth/sso']
 const AUTH_WHITELIST = [
   '/auth/login',
@@ -46,7 +45,6 @@ export interface AxiosConfig {
     port: number
     path?: string
   }
-  APP_LIST: Array<RegistrableApp<Record<string, unknown>>>
 }
 const instanceMap: InstanceMap = {
   base: null, // 当前系统ip下的请求

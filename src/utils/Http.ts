@@ -1,11 +1,3 @@
-/*
- * @Author: weicong
- * @LastEditors: cola
- * @Description:
- * @Date: 2021-12-12 22:03:11
- * @LastEditTime: 2023-07-15 17:04:16
- * @FilePath: \vite-project\src\utils\Http.js
- */
 import axios, {
   AxiosRequestConfig,
   AxiosResponse,

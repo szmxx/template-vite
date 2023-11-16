@@ -9,6 +9,7 @@
     <div>{{ title }}</div>
     <div class="center gap-x-2">
       <DarkToggle></DarkToggle>
+      <LangToggle></LangToggle>
     </div>
   </div>
   <div class="flex gap-4 p-4">
@@ -26,13 +27,16 @@
 <script setup lang="ts">
 import useStore from '@/store/app'
 const { config } = useStore()
+const { t } = useI18n()
 const title = config?.title
 const portals = ref([
   {
-    label: '中文',
+    label: t('common.chinese'),
+    path: '/cn',
   },
   {
-    label: '英文',
+    label: t('common.english'),
+    path: '/en',
   },
   {
     label: 'DEMO',

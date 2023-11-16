@@ -1,3 +1,9 @@
+/*
+ * @Author: cola
+ * @Date: 2022-07-04 19:10:01
+ * @LastEditors: cola
+ * @Description:
+ */
 import {
   createRouter,
   RouteRecordRaw,
@@ -8,6 +14,7 @@ import HomePage from '@/views/home'
 import ErrorPage from '@/views/error'
 import routes from './routes'
 import { App } from 'vue'
+import useAppStore from '@/store/app'
 
 export const ConstantRoutes: RouteRecordRaw[] = [
   {
@@ -48,8 +55,24 @@ export function isNotFoundRoute(route: RouteLocationNormalized) {
     ? location.pathname.split('/')[1]
     : location.pathname.split('/')[0]
   pathname = '/' + pathname
+  const store = useAppStore()
 
-  const routes = [...router.getRoutes()]
+  const appRoutes = store.appList.reduce(
+    (acc: Record<string, unknown>[], cur) => {
+      let rules = cur.activeRule as string[]
+      if (!Array.isArray(rules)) {
+        rules = [rules]
+      }
+      rules.forEach((rule) => {
+        acc.push({
+          path: rule,
+        })
+      })
+      return acc
+    },
+    [],
+  )
+  const routes = [...router.getRoutes(), ...appRoutes]
   for (let i = 0; i < routes.length; i++) {
     // 路由表路径和本地一致，则是本地路由
     if (routes[i].path === pathname) {

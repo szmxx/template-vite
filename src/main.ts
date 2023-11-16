@@ -1,3 +1,9 @@
+/*
+ * @Author: cola
+ * @Date: 2022-07-04 16:13:38
+ * @LastEditors: cola
+ * @Description:
+ */
 import { createApp } from 'vue'
 import App from './App.vue'
 import install from '@/register'

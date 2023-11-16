@@ -1,3 +1,10 @@
+/*
+ * @Author: cola
+ * @Date: 2022-07-19 14:14:09
+ * @LastEditors: cola
+ * @Description:
+ */
+
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 darkModeMediaQuery.addListener((e) => {
   useTheme(e.matches ? 'dark' : 'light')

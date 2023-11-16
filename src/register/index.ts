@@ -1,3 +1,9 @@
+/*
+ * @Author: cola
+ * @Date: 2022-07-05 10:22:47
+ * @LastEditors: cola
+ * @Description:
+ */
 import { App } from 'vue'
 import './registerStyle'
 import { install as installRouter } from '@/route'

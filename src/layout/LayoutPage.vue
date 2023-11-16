@@ -1,9 +1,3 @@
-<!--
- * @Author: cola
- * @Date: 2022-07-05 16:16:23
- * @LastEditors: cola
- * @Description:
--->
 <template>
   <div class="flex flex-nowrap h-full w-full">
     <div class="min-w-[220px] <sm:(absolute hidden)">
@@ -14,12 +8,7 @@
         <slot>DEMO 系统</slot>
       </div>
       <div class="flex-1">
-        <router-view v-if="isSelfRoute"></router-view>
-        <section
-          v-else
-          id="subapp-viewport"
-          class="relative w-full h-full"
-        ></section>
+        <router-view></router-view>
       </div>
     </div>
   </div>
@@ -27,16 +16,4 @@
 
 <script setup lang="ts">
 import LeftMenu from './components/LeftMenu.vue'
-import { isSelfRouteFn } from '@/layout/utils'
-// 是否是自身路由
-const isSelfRoute = isSelfRouteFn()
-watch(
-  () => isSelfRoute,
-  () => {
-    console.log(isSelfRoute)
-  },
-  {
-    immediate: true,
-  },
-)
 </script>
